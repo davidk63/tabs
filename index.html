@@ -8,22 +8,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <button>london</button>
-    <button>paris</button>
-    <button>usa</button>
+  <div class="all_buttons">
+    <button class="london-button"  onclick="openCity(event, 'Paris')">london</button>
+    <button class="paris-button">paris</button>
+    <button class="usa-button">usa</button>
   </div>
-  <div>
+  <div id="london " class="tabcontent">
     <h3>london</h3>
     <p>Lorem ipsum dolor sit amet.</p>
   </div> 
-  <div>
+  <div id="paris" class="tabcontent">
     <h3>paris</h3>
     <p>Lorem ipsum dolor sit amet.</p>
   </div>
-  <div>
+  <div id="usa"class="tabcontent">
     <h3>usa</h3>
     <p>Lorem ipsum dolor sit amet.</p>
   </div> 
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+       
 </body>
 </html>
