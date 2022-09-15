@@ -1,0 +1,45 @@
+.all_buttons{
+
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(245, 220, 220);
+
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.london-button{
+    padding: 20px;
+     border: 0px;
+     background-color: rgb(160, 158, 158);
+}
+.paris-button{
+    padding: 20px;
+    border: 0px;
+    background: transparent;
+
+}
+.usa-button{
+    padding: 20px;
+    border: 0px;
+    background: transparent;
+}
+.paris-button:hover{
+    background-color: rgb(221, 217, 217);
+}
+.usa-button:hover{
+    background-color: rgb(221, 217, 217);
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
